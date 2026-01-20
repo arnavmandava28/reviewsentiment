@@ -89,9 +89,8 @@ tests = [
     "painfully slow and boring",
     "not bad but not great",
     "I loved the visuals",
-    "this movie was atrocious",
-    "this movie reminded me of shivam",
-    "this movie reminded me of anthony davis"
+    "this movie was atrocious"
+    
 ]
 
 for t in tests:
