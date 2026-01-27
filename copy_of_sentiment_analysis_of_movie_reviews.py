@@ -17,6 +17,7 @@ import re
 """### Model Evaluation"""
 
 from sklearn.metrics import accuracy_score
+X_train, X_test, y_train, y_test, reviews_train, reviews_test = train_test_split(X, y, sentences['review'].values, test_size=0.2, random_state=42)
 
 # Make predictions on the test set using the original review texts from the test set
 y_pred = [predict(text) for text in reviews_test]
@@ -68,7 +69,6 @@ X = np.array([sentence_vector(tokens) for tokens in corpus])
 y = np.array(sentences['sentiment'])
 
 # Perform train-test split, also splitting the original review texts
-X_train, X_test, y_train, y_test, reviews_train, reviews_test = train_test_split(X, y, sentences['review'].values, test_size=0.2, random_state=42)
 
 # ----------------------
 # Simple sentiment prototypes
